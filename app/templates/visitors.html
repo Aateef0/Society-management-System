@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Visitor Logs</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Visitor Name</th>
+            <th>Visit Date</th>
+            <th>Tenant Visited</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for visitor in visitors %}
+        <tr>
+            <td>{{ visitor.visitor_name }}</td>
+            <td>{{ visitor.visit_date }}</td>
+            <td>{{ visitor.tenant_visited }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
